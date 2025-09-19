@@ -2,10 +2,25 @@ package co.edu.uniquindio.universidad;
 
 import co.edu.uniquindio.universidad.model.Docente;
 import co.edu.uniquindio.universidad.model.Estudiante;
+import co.edu.uniquindio.universidad.model.Universidad;
 
 public class Main {
     public static void main(String[] args) {
         //Inicializar datos
+        Universidad universidad = inicializarDatos();
+
+        Estudiante estudiante = universidad.getListaEstudiantes().get(0);
+        estudiante.getOwnedByUniversidad();
+
+
+        //Llamado a las funciones
+        //calcularDefinitivaEstudiante(estudiante1, docente);
+        //calcularDefinitivaEstudiante(estudiante2, docente);
+        //calcularDefinitivaEstudiante(estudiante3, docente);
+    }
+
+    private static Universidad inicializarDatos() {
+        Universidad universidad = inicializarDatos();
         Estudiante estudiante1 = new Estudiante();
         estudiante1.setNombre("Pedro");
         estudiante1.setApellido("Perez");
@@ -34,10 +49,7 @@ public class Main {
         docente.setEdad(40);
         docente.setCorreo("pedro@gmail.com");
 
-        //Llamado a las funciones
-        calcularDefinitivaEstudiante(estudiante1, docente);
-        calcularDefinitivaEstudiante(estudiante2, docente);
-        calcularDefinitivaEstudiante(estudiante3, docente);
+        return universidad;
     }
 
 

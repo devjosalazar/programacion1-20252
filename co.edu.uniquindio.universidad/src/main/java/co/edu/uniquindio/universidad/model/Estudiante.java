@@ -8,6 +8,7 @@ public class Estudiante {
     private double nota1;
     private double nota2;
     private double nota3;
+    private Universidad ownedByUniversidad;
 
     public Estudiante() {
     }
@@ -58,5 +59,13 @@ public class Estudiante {
 
     public void setNota3(double nota3) {
         this.nota3 = nota3;
+    }
+
+    public Universidad getOwnedByUniversidad() {
+        return ownedByUniversidad;
+    }
+
+    public void setOwnedByUniversidad(Universidad ownedByUniversidad) {
+        this.ownedByUniversidad = ownedByUniversidad;
     }
 }
