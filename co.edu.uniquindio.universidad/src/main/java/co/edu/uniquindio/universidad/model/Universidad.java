@@ -47,4 +47,51 @@ public class Universidad {
     public void setRector(Rector rector) {
         this.rector = rector;
     }
+
+    public boolean crearEstudiante(String nombre,
+                                   String apellido,
+                                   int edad,
+                                   double nota1,
+                                   double nota2,
+                                   double nota3,
+                                   String identificacion) {
+        //Obtener el estduiante
+        Estudiante estudianteEncontrado = obtenerEstudiante(identificacion);
+        if(estudianteEncontrado == null) {
+            Estudiante estudiante = new Estudiante();
+            estudiante.setNombre(nombre);
+            estudiante.setApellido(apellido);
+            estudiante.setEdad(edad);
+            estudiante.setNota1(nota1);
+            estudiante.setNota2(nota2);
+            estudiante.setNota3(nota3);
+            estudiante.setIdentificacion(identificacion);
+            getListaEstudiantes().add(estudiante);
+
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    private Estudiante obtenerEstudiante(String identificacion) {
+        Estudiante estudianteEncontrado =  null;
+        for (Estudiante estudiante : getListaEstudiantes()) {
+            if(estudiante.getIdentificacion().equalsIgnoreCase(identificacion)) {
+                estudianteEncontrado = estudiante;
+                break;
+            }
+        }
+
+        return estudianteEncontrado;
+    }
 }
+
+
+
+
+
+
+
+
+

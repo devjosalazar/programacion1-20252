@@ -5,6 +5,7 @@ public class Estudiante {
     private String nombre;
     private String apellido;
     private int edad;
+    private String identificacion;
     private double nota1;
     private double nota2;
     private double nota3;
@@ -59,6 +60,14 @@ public class Estudiante {
 
     public void setNota3(double nota3) {
         this.nota3 = nota3;
+    }
+
+    public String getIdentificacion() {
+        return identificacion;
+    }
+
+    public void setIdentificacion(String identificacion) {
+        this.identificacion = identificacion;
     }
 
     public Universidad getOwnedByUniversidad() {

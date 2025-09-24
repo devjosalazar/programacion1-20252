@@ -12,15 +12,17 @@ public class Main {
         Estudiante estudiante = universidad.getListaEstudiantes().get(0);
         estudiante.getOwnedByUniversidad();
 
+    private static void eliminarEstudiante(Universidad universidad) {
+    }
 
-        //Llamado a las funciones
-        //calcularDefinitivaEstudiante(estudiante1, docente);
-        //calcularDefinitivaEstudiante(estudiante2, docente);
-        //calcularDefinitivaEstudiante(estudiante3, docente);
+    private static void actualizarEstudiante(Universidad universidad) {
+    }
+
+    private static void obtenerEstudiante(Universidad universidad) {
     }
 
     private static Universidad inicializarDatos() {
-        Universidad universidad = inicializarDatos();
+        Universidad universidad = new Universidad();
         Estudiante estudiante1 = new Estudiante();
         estudiante1.setNombre("Pedro");
         estudiante1.setApellido("Perez");
@@ -28,6 +30,7 @@ public class Main {
         estudiante1.setNota1(3.0);
         estudiante1.setNota1(4.0);
         estudiante1.setNota1(2.0);
+        estudiante1.setIdentificacion("1094");
         Estudiante estudiante2 = new Estudiante();
         estudiante2.setNombre("Ana");
         estudiante2.setApellido("Arias");
@@ -35,6 +38,7 @@ public class Main {
         estudiante2.setNota1(2.0);
         estudiante2.setNota1(3.0);
         estudiante2.setNota1(1.0);
+        estudiante2.setIdentificacion("1095");
         Estudiante estudiante3 = new Estudiante();
         estudiante3.setNombre("Carlos");
         estudiante3.setApellido("Perez");
@@ -42,12 +46,18 @@ public class Main {
         estudiante3.setNota1(3.0);
         estudiante3.setNota1(3.0);
         estudiante3.setNota1(3.0);
+        estudiante3.setIdentificacion("1096");
 
         Docente docente = new Docente();
         docente.setNombre("Pedro");
         docente.setApellido("Perez");
         docente.setEdad(40);
         docente.setCorreo("pedro@gmail.com");
+
+        universidad.getListaEstudiantes().add(estudiante1);
+        universidad.getListaEstudiantes().add(estudiante2);
+        universidad.getListaEstudiantes().add(estudiante3);
+        universidad.getListaDocentes().add(docente);
 
         return universidad;
     }
